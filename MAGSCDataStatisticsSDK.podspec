@@ -7,36 +7,28 @@
 #
 
 Pod::Spec.new do |s|
+
   s.name             = 'MAGSCDataStatisticsSDK'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of MAGSCDataStatisticsSDK.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'MAGSCDataStatisticsSDK'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+四川县级融媒体技术平台针对区县APP用户操作行为的统计。本SDK中各接口方法，需要各区县开发商自行在APP中各操作节点中埋点调用.
                        DESC
 
-  s.homepage         = 'https://github.com/徐小彬/MAGSCDataStatisticsSDK'
+  s.homepage         = 'http://training.sctvcloud.com/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '徐小彬' => '17368690371@163.com' }
-  s.source           = { :git => 'https://github.com/徐小彬/MAGSCDataStatisticsSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/lyeah-ios/MAGSCDataStatisticsSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'MAGSCDataStatisticsSDK/Classes/**/*'
+  s.requires_arc = true
+
+  s.ios.vendored_frameworks = 'MAGSCDataStatisticsSDK/SCDataStatisticsSDK.framework'
   
-  # s.resource_bundles = {
-  #   'MAGSCDataStatisticsSDK' => ['MAGSCDataStatisticsSDK/Assets/*.png']
-  # }
+  s.dependency "AFNetworking/NSURLSession", "~> 4.0"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
